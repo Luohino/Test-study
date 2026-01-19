@@ -2,19 +2,23 @@
 const subjectsData = {
     economics: createDummyModels("Economics"),
     accountancy: createDummyModels("Accountancy"),
-    english: createDummyModels("English"),
+    english: [
+        { name: "Model Set 1", questions: englishModel1 },
+        { name: "Model Set 2", questions: englishModel2 },
+        { name: "Model Set 3", questions: englishModel3 },
+        { name: "Model Set 4", questions: englishModel4 }
+    ],
     hindi: [
         { name: "Model Set 1", questions: hindiModel1 },
         { name: "Model Set 2", questions: hindiModel2 },
         { name: "Model Set 3", questions: hindiModel3 },
-        { name: "Model Set 4", questions: hindiModel4 },
-        { name: "Model Set 5", questions: hindiModel5 }
+        { name: "Model Set 4", questions: hindiModel4 }
     ]
 };
 
-function createDummyModels(subjectName) {
+function createDummyModels(subjectName, count = 5) {
     const models = [];
-    for (let i = 1; i <= 5; i++) {
+    for (let i = 1; i <= count; i++) {
         models.push({
             name: `Model Set ${i}`,
             questions: [
