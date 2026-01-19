@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Study Deck</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-content">
+                <button id="back-btn" class="icon-btn hidden" aria-label="Back">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M19 12H5" />
+                        <path d="M12 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <h1 id="app-title">Study Deck</h1>
+                <div class="placeholder-icon"></div>
+            </div>
+        </header>
+
+        <!-- Home View: Subject Selection -->
+        <main id="home-view" class="view active-view">
+            <div class="welcome-section">
+                <h2>Select Subject</h2>
+                <p>Choose a subject to practice.</p>
+            </div>
+
+            <div class="grid-container">
+                <div class="card subject-card" data-subject="economics" style="--accent-color: #4facfe;">
+                    <div class="card-icon">📈</div>
+                    <h3>Economics</h3>
+                    <p>Micro & Macro</p>
+                </div>
+                <div class="card subject-card" data-subject="accountancy" style="--accent-color: #43e97b;">
+                    <div class="card-icon">📊</div>
+                    <h3>Accountancy</h3>
+                    <p>Financial Acc.</p>
+                </div>
+                <div class="card subject-card" data-subject="english" style="--accent-color: #fa709a;">
+                    <div class="card-icon">📚</div>
+                    <h3>English</h3>
+                    <p>Lit & Grammar</p>
+                </div>
+                <div class="card subject-card" data-subject="hindi" style="--accent-color: #fccb90;">
+                    <div class="card-icon">🕉️</div>
+                    <h3>Hindi</h3>
+                    <p>Vyakaran</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Model Selection View -->
+        <main id="model-view" class="view">
+            <div class="welcome-section">
+                <h2>Select Model Set</h2>
+                <p>Choose a practice set to begin.</p>
+            </div>
+            <div id="model-list" class="model-list">
+                <!-- Models will be injected here -->
+            </div>
+        </main>
+
+        <!-- MCQ Quiz View -->
+        <main id="quiz-view" class="view">
+            <div class="quiz-header">
+                <span id="question-counter">1/10</span>
+                <div class="progress-bar">
+                    <div id="quiz-progress" class="progress-fill" style="width: 0%"></div>
+                </div>
+            </div>
+
+            <div class="mcq-container">
+                <div class="question-card">
+                    <h3 id="question-text">Question text goes here?</h3>
+                </div>
+
+                <div id="options-container" class="options-grid">
+                    <!-- Options injected here -->
+                </div>
+            </div>
+
+            <div class="quiz-footer">
+                <button id="next-btn" class="primary-btn" disabled>Next Question</button>
+            </div>
+        </main>
+
+        <!-- Result View -->
+        <main id="result-view" class="view">
+            <div class="result-container">
+                <div class="score-card">
+                    <div class="score-circle">
+                        <span id="score-text">0</span>
+                        <span class="total-text">/ 10</span>
+                    </div>
+                    <h2>Quiz Completed!</h2>
+                    <p id="result-message">Great job!</p>
+                </div>
+
+                <div class="result-actions">
+                    <button id="restart-btn" class="primary-btn">Try Another Set</button>
+                    <button id="home-btn" class="secondary-btn">Back to Home</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="Hindi_model_1.js"></script>
+    <script src="Hindi_model_2.js"></script>
+    <script src="Hindi_model_3.js"></script>
+    <script src="Hindi_model_4.js"></script>
+    <script src="Hindi_model_5.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
