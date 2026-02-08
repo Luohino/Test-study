@@ -1,14 +1,14 @@
 :root {
-	--bg-color: #121212;
-	--card-bg: #1e1e1e;
-	--text-primary: #ffffff;
-	--text-secondary: #b0b3b8;
+	--bg-color: #f5f5f7;
+	--card-bg: #ffffff;
+	--text-primary: #1a1a1a;
+	--text-secondary: #666666;
 	--primary-color: #4e69e2;
 	--primary-hover: #3d54b8;
 	--success-color: #45bd62;
 	--error-color: #f02849;
-	--shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
-	--shadow-md: 0 4px 12px rgba(0, 0, 0, 0.5);
+	--shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+	--shadow-md: 0 4px 12px rgba(0, 0, 0, 0.12);
 	--radius-md: 12px;
 	--radius-lg: 20px;
 	--font-main: 'Outfit', sans-serif;
@@ -43,9 +43,9 @@ body {
 /* Header */
 .app-header {
 	padding: 16px 20px;
-	background: rgba(30, 30, 30, 0.9);
+	background: rgba(255, 255, 255, 0.95);
 	backdrop-filter: blur(10px);
-	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 	z-index: 10;
 	flex-shrink: 0;
 }
@@ -79,7 +79,7 @@ body {
 }
 
 .icon-btn:hover {
-	background: rgba(255, 255, 255, 0.1);
+	background: rgba(0, 0, 0, 0.05);
 }
 
 .icon-btn.hidden {
@@ -150,7 +150,7 @@ body {
 	box-shadow: var(--shadow-sm);
 	cursor: pointer;
 	transition: transform 0.2s, box-shadow 0.2s;
-	border: 1px solid rgba(255, 255, 255, 0.05);
+	border: 1px solid rgba(0, 0, 0, 0.1);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -172,7 +172,7 @@ body {
 .card:hover {
 	transform: translateY(-4px);
 	box-shadow: var(--shadow-md);
-	background: #252525;
+	background: #f9f9fb;
 }
 
 .card:active {
@@ -214,13 +214,13 @@ body {
 	align-items: center;
 	justify-content: space-between;
 	transition: transform 0.2s;
-	border: 1px solid rgba(255, 255, 255, 0.05);
+	border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .model-item:hover {
 	transform: translateX(4px);
 	border-color: var(--primary-color);
-	background: #252525;
+	background: #f9f9fb;
 }
 
 .model-item h3 {
@@ -250,7 +250,7 @@ body {
 
 .progress-bar {
 	height: 6px;
-	background: #333;
+	background: #e0e0e0;
 	border-radius: 3px;
 	overflow: hidden;
 }
@@ -273,7 +273,7 @@ body {
 	padding: 20px;
 	border-radius: var(--radius-md);
 	box-shadow: var(--shadow-sm);
-	border: 1px solid rgba(255, 255, 255, 0.05);
+	border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 #question-text {
@@ -292,7 +292,7 @@ body {
 
 .option-btn {
 	background: var(--card-bg);
-	border: 1px solid #333;
+	border: 1px solid #d0d0d0;
 	padding: 16px;
 	border-radius: var(--radius-md);
 	text-align: left;
@@ -305,8 +305,8 @@ body {
 }
 
 .option-btn:hover:not(.disabled) {
-	background: #2a2a2a;
-	border-color: #555;
+	background: #f9f9fb;
+	border-color: #b0b0b0;
 }
 
 .option-btn.correct {
@@ -330,7 +330,7 @@ body {
 .quiz-footer {
 	margin-top: 20px;
 	padding-top: 20px;
-	border-top: 1px solid rgba(255, 255, 255, 0.1);
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 /* Result View */
@@ -404,8 +404,8 @@ body {
 }
 
 .primary-btn:disabled {
-	background: #444;
-	color: #888;
+	background: #e0e0e0;
+	color: #999999;
 	cursor: not-allowed;
 	box-shadow: none;
 }
